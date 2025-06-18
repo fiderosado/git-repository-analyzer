@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useCallback, useEffect } from 'react';
-import { Repository, Branch, Commit } from '../types/git';
+import { Repository, Branch, Commit } from '@/types/git';
 import gitService from '../services/gitService';
 import TokenForm from './TokenForm';
 import RepositoryForm from './RepositoryForm';
@@ -10,6 +10,9 @@ import CommitsChart from './CommitsChart';
 import CommitSizeChart from './CommitSizeChart';
 import WeeklyPatternChart from './WeeklyPatternChart';
 import { GitBranch, Star, Eye, Shield, BarChart3 } from 'lucide-react';
+import Link from "next/link";
+import { Github } from "lucide-react"
+import WhatsAppCredit from "@/components/WhatsAppCredit";
 
 export default function GitAnalyzer() {
   const [token, setToken] = useState<string>('');
@@ -125,6 +128,20 @@ export default function GitAnalyzer() {
           <p className="text-gray-400 max-w-2xl mx-auto">
             Analyze GitHub repositories, explore commits across branches, and visualize development patterns with interactive charts and comprehensive analytics.
           </p>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground justify-center mt-4">
+            <span>Created by</span>
+            <Link
+                href="https://github.com/fiderosado"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-slate-100 to-slate-200 hover:from-slate-200 hover:to-slate-300 dark:from-slate-800 dark:to-slate-700 dark:hover:from-slate-700 dark:hover:to-slate-600 text-slate-700 dark:text-slate-300 font-medium transition-all duration-200 hover:scale-105 hover:shadow-sm"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+              <Github className="w-4 h-4" />
+              @Fiderosado
+            </Link>
+
+            <WhatsAppCredit phoneNumber={"+14374408829"} />
+          </div>
         </div>
 
         <div className="max-w-6xl mx-auto space-y-6">
