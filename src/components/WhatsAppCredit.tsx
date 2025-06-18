@@ -1,4 +1,4 @@
-import { Github, MessageCircle } from "lucide-react"
+import { MessageCircle } from "lucide-react"
 export default function WhatsAppCredit({
                                    phoneNumber = "1234567890",
                                    message = "Hola! Me interesa tu trabajo",
