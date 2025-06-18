@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Radar, Bar } from 'react-chartjs-2';
 import { Clock, Calendar, ChevronDown } from 'lucide-react';
-import { Commit } from '../types/git';
+import { Commit } from '@/types/git';
 import { parseISO, getDay, format, getYear, startOfYear, endOfYear, eachMonthOfInterval } from 'date-fns';
 
 interface WeeklyPatternChartProps {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { GitBranch, ChevronDown } from 'lucide-react';
-import { Branch } from '../types/git';
+import { Branch } from '@/types/git';
 
 interface BranchSelectorProps {
   branches: Branch[];

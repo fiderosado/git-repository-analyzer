@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { Calendar as CalendarIcon } from 'lucide-react';
-import { Commit } from '../types/git';
+import { Commit } from '@/types/git';
 import { format, parseISO, startOfWeek, endOfWeek, eachDayOfInterval, getDay } from 'date-fns';
 
 interface ActivityHeatmapProps {

@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react';
 import { Line, Scatter } from 'react-chartjs-2';
 import { FileText, TrendingUp } from 'lucide-react';
-import { Commit } from '../types/git';
+import { Commit } from '@/types/git';
 import { format, parseISO } from 'date-fns';
+import {TooltipItem} from "chart.js";
 
 interface CommitSizeChartProps {
   commits: Commit[];
@@ -70,11 +71,11 @@ export default function CommitSizeChart({ commits, loading }: CommitSizeChartPro
       },
       tooltip: {
         callbacks: {
-          title: (context: any) => {
+          title: (context: TooltipItem<'scatter'>[]) => {
             const point = messageLengthData[context[0].dataIndex];
             return point.date;
           },
-          label: (context: any) => {
+          label: (context: TooltipItem<'scatter'>) => {
             const point = messageLengthData[context.dataIndex];
             return [
               `Length: ${context.parsed.y} characters`,

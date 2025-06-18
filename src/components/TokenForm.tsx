@@ -30,7 +30,7 @@ export default function TokenForm({ token, onTokenChange, onTokenSave, isValid, 
           <div className="text-sm text-blue-300">
             <p className="font-medium mb-2">GitHub Personal Access Token Required</p>
             <p className="mb-3">
-              To access repository data, you need a GitHub Personal Access Token with 'repo' permissions.
+              To access repository data, you need a GitHub Personal Access Token with &apos;repo&apos; permissions.
             </p>
             <a
               href="https://github.com/settings/tokens/new?scopes=repo&description=Git%20Repository%20Analyzer"
@@ -64,7 +64,7 @@ export default function TokenForm({ token, onTokenChange, onTokenSave, isValid, 
               {isValid !== null && (
                 <div className="flex items-center">
                   {isValid ? (
-                    <CheckCircle className="text-green-400\" size={16} />
+                    <CheckCircle className="text-green-400" size={16} />
                   ) : (
                     <AlertCircle className="text-red-400" size={16} />
                   )}

@@ -1,4 +1,4 @@
-import { Repository, Branch, Commit } from '../types/git';
+import { Repository, Branch, Commit } from '@/types/git';
 
 const GITHUB_API_BASE = 'https://api.github.com';
 
@@ -49,6 +49,7 @@ class GitService {
       });
       return response.ok;
     } catch (error) {
+      console.log("Error :" , error)
       return false;
     }
   }

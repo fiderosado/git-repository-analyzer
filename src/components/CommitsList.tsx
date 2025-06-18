@@ -1,6 +1,6 @@
 import React from 'react';
 import { Calendar, User, MessageSquare, ExternalLink } from 'lucide-react';
-import { Commit } from '../types/git';
+import { Commit } from '@/types/git';
 import { format } from 'date-fns';
 
 interface CommitsListProps {

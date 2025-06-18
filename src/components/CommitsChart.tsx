@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { Line, Bar } from 'react-chartjs-2';
 import { format, parseISO, startOfDay } from 'date-fns';
 import { BarChart3, TrendingUp } from 'lucide-react';
-import { Commit } from '../types/git';
+import { Commit } from '@/types/git';
 
 
 import {

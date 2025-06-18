@@ -50,6 +50,7 @@ export default function GitAnalyzer() {
     } catch (err) {
       setTokenValid(false);
       setError('Failed to validate token');
+      console.log("error:", err)
     } finally {
       setLoading(prev => ({ ...prev, token: false }));
     }
